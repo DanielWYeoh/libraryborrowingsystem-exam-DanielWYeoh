@@ -43,7 +43,7 @@ public class BorrowController {
 
     public BorrowController(LibraryService service, Scanner scanner) {
         this.service    = service;
-        this.borrowView = new BorrowView(service);
+        this.borrowView = new BorrowView();
         this.scanner    = scanner;
     }
 
@@ -131,6 +131,6 @@ public class BorrowController {
 
     /** Fetches all borrow records from the service and passes them to the view. */
     private void viewAllRecords() {
-        borrowView.showAllRecords();
+        borrowView.showAllRecords(service.getBorrowRecords());
     }
 }

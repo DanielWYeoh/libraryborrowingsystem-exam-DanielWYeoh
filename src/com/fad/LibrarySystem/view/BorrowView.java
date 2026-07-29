@@ -10,7 +10,6 @@
 package com.fad.LibrarySystem.view;
 
 import com.fad.LibrarySystem.model.BorrowRecord;
-import com.fad.LibrarySystem.model.LibraryService;
 import java.util.List;
 
 /**
@@ -25,20 +24,13 @@ import java.util.List;
  */
 public class BorrowView {
 
-    private final LibraryService service;
-
-    public BorrowView(LibraryService service) {
-        this.service = service;
-    }
-
     /** Prints the info string of a single borrow record. */
     public void showRecord(BorrowRecord record) {
         System.out.println(record.getInfo());
     }
 
     /** Prints all borrow records, or a "no records" message if the list is empty. */
-    public void showAllRecords() {
-        List<BorrowRecord> records = service.getBorrowRecords();
+    public void showAllRecords(List<BorrowRecord> records) {
         if (records.isEmpty()) {
             System.out.println("No borrow records.");
             return;

@@ -64,7 +64,7 @@ public class App extends Application {
         // Add BorrowTab, FineTab here as each controller is built
 
         stage.setScene(new Scene(tabPane, 1000, 650));
-        stage.setTitle("Library Borrowing System");
+        stage.setTitle("Library Borrowing System - Fixed By Myself, Hore!");
         stage.show();
     }
 
